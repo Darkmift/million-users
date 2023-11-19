@@ -8,6 +8,6 @@ export class AppController {
 
   @Get()
   getData() {
-    return this.appService.getData();
+    return this.appService.fetchUsers({ page: 1, limit: 10 });
   }
 }
