@@ -5,6 +5,8 @@
   "scripts": {
     "start:web-api": "NODE_ENV=development nx serve web-api",
     "start:web-api:prod": "NODE_ENV=production nx serve web-api",
+    "start:fetcher": "NODE_ENV=development nx serve fetcher",
+    "start:fetcher:prod": "NODE_ENV=production nx serve fetcher",
     "start:seeder": "NODE_ENV=development nx serve seeder",
     "start:seeder:prod": "NODE_ENV=production nx serve seeder",
     "start:react-app": "NODE_ENV=development nx serve react-app",
