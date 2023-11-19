@@ -1,3 +1,10 @@
+## Project is docker based with logging to Logtail/better stack
+
+## Better Stack onboarding
+- [onboarding](https://betterstack.com/docs/logs/docker/)
+# Winston logtail
+- [guide](https://betterstack.com/community/guides/logging/how-to-install-setup-and-use-winston-and-morgan-to-log-node-js-applications/#centralizing-your-logs-in-the-cloud)
+
 # 
 
 <a alt="Nx logo" href="https://nx.dev" target="_blank" rel="noreferrer"><img src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png" width="45"></a>
@@ -56,7 +63,3 @@ Nx comes with local caching already built-in (check your `nx.json`). On CI you m
 - [Subscribe to the Nx Youtube Channel](https://www.youtube.com/@nxdevtools)
 - [Follow us on Twitter](https://twitter.com/nxdevtools)
 
-## Better Stack onboarding
-- [onboarding](https://betterstack.com/docs/logs/docker/)
-# Winston logtail
-- [guide](https://betterstack.com/community/guides/logging/how-to-install-setup-and-use-winston-and-morgan-to-log-node-js-applications/#centralizing-your-logs-in-the-cloud)
