@@ -6,15 +6,22 @@
 import { Logger } from '@nestjs/common';
 import { NestFactory } from '@nestjs/core';
 import { AppModule } from './app/app.module';
+import loggerFactory from './util/winston.util';
 
-import * as dotenv from 'dotenv';
-dotenv.config({ path: `../../.env.${process.env.NODE_ENV}` });
+import { ConfigService } from '@nestjs/config';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule);
   const globalPrefix = 'api';
   app.setGlobalPrefix(globalPrefix);
-  const port = process.env.FETCHER_PORT || 3000;
+
+  const configService = app.get(ConfigService);
+  const port = configService.get('FETCHER_PORT') || 3000;
+  const token = configService.get('LOGTAIL_TOKEN');
+  console.log('🚀 ~ file: main.ts:21 ~ bootstrap ~ token:', { port, token });
+
+  app.useLogger(loggerFactory(token));
+
   await app.listen(port);
   Logger.log(
     `🚀FETCHER Application is running on: http://localhost:${port}/${globalPrefix}`
