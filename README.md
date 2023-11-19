@@ -55,3 +55,8 @@ Nx comes with local caching already built-in (check your `nx.json`). On CI you m
 - [Join the community](https://nx.dev/community)
 - [Subscribe to the Nx Youtube Channel](https://www.youtube.com/@nxdevtools)
 - [Follow us on Twitter](https://twitter.com/nxdevtools)
+
+## Better Stack onboarding
+- [onboarding](https://betterstack.com/docs/logs/docker/)
+# Winston logtail
+- [guide](https://betterstack.com/community/guides/logging/how-to-install-setup-and-use-winston-and-morgan-to-log-node-js-applications/#centralizing-your-logs-in-the-cloud)

@@ -1,9 +1,12 @@
-version: '2'
+version: '3'
 services:
   zookeeper:
     image: wurstmeister/zookeeper
     ports:
       - "2181:2181"
+    logging:
+      driver: json-file
+
   kafka:
     image: wurstmeister/kafka
     ports:
@@ -13,6 +16,9 @@ services:
       KAFKA_ZOOKEEPER_CONNECT: zookeeper:2181
     volumes:
       - /var/run/docker.sock:/var/run/docker.sock
+    logging:
+      driver: json-file
+
   ravendb:
     image: ravendb/ravendb
     environment:
@@ -23,5 +29,8 @@ services:
       - "38888:38888" # Port for server communication
     volumes:
       - ravendb-data:/opt/RavenDB/Server/RavenData
+    logging:
+      driver: json-file
+
 volumes:
   ravendb-data:
